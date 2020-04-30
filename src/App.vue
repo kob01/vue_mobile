@@ -39,6 +39,7 @@
 <style lang="scss" scoped>
 .app-container {
   padding-top: 40px;
+  // 切换特效
   overflow-x: hidden;
 }
 
@@ -49,6 +50,7 @@
 
 .v-leave-to {
   opacity: 0;
+  //进入和消失的方向相反
   transform: translateX(-100%);
   position: absolute;
 }
