@@ -39,6 +39,7 @@
 <style lang="scss" scoped>
 .app-container {
   padding-top: 40px;
+  padding-bottom: 50px;
   // 切换特效
   overflow-x: hidden;
 }
