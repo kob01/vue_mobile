@@ -6,11 +6,11 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 //导入格式化事件插件
-// import moment from 'moment'
+import moment from 'moment'
 //定义全局的过滤器
-// Vue.filters('dataFormat', function(dataStr, pattern = 'YYYY-MM-DD HH:mm:ss') {
-//   return moment(dataStr).format(pattern)
-// })
+Vue.filters('dataFormat', function(dataStr, pattern = 'YYYY-MM-DD HH:mm:ss') {
+  return moment(dataStr).format(pattern)
+})
 
 // 2.1 导入 vue-resource
 import VueResource from 'vue-resource'
@@ -18,7 +18,8 @@ import VueResource from 'vue-resource'
 Vue.use(VueResource)
 //设置请求根路径
 Vue.http.options.root = 'http://vue.studyit.io'
-
+//全局设置post时候表单数据格式组织形式
+Vue.http.options.emulateJSON = true
 // 导入 MUI 的样式
 import './lib/mui/css/mui.min.css'
 // 导入扩展图标样式

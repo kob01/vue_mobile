@@ -17,7 +17,7 @@
         >
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-        <router-link to="#">
+        <router-link to="/home/photolist">
           <img src="../../images/menu2.png" alt="" />
           <div class="mui-media-body">图片分享</div></router-link
         >
@@ -51,33 +51,33 @@
 </template>
 
 <script>
-import { Toast } from "mint-ui";
+import { Toast } from 'mint-ui'
 
 export default {
   data() {
     return {
-      lunbotuList: [], // 保存轮播图的数组
-    };
+      lunbotuList: [] // 保存轮播图的数组
+    }
   },
   created() {
-    this.getLunbotu();
+    this.getLunbotu()
   },
   methods: {
     getLunbotu() {
       // 获取轮播图数据的方法
-      this.$http.get("api/getlunbo").then((result) => {
+      this.$http.get('api/getlunbo').then(result => {
         // console.log(result.body);
         if (result.body.status === 0) {
           // 成功了
-          this.lunbotuList = result.body.message;
+          this.lunbotuList = result.body.message
         } else {
           // 失败的
-          Toast("加载轮播图失败 ！");
+          Toast('加载轮播图失败 ！')
         }
-      });
-    },
-  },
-};
+      })
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
