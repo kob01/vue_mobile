@@ -37,6 +37,9 @@
 <script></script>
 
 <style lang="scss" scoped>
+.mt-header {
+  z-index: 99;
+}
 .app-container {
   padding-top: 40px;
   padding-bottom: 50px;
@@ -60,4 +63,6 @@
 .v-leave-active {
   transition: all 0.5s ease;
 }
+
+//改类名解决tapbar切换问题
 </style>
