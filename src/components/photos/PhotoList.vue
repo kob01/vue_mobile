@@ -11,8 +11,9 @@
             :class="['mui-control-item', item.id == 0 ? 'mui-active' : '']"
             v-for="item in cates"
             :key="item.id"
-            @click="getPhotoListByCateId(item.id)"
+            @tap="getPhotoListByCateId(item.id)"
           >
+            <!-- tap是手机端MUI组件特有 -->
             {{ item.title }}
           </a>
         </div>
